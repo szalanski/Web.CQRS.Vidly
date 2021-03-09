@@ -15,7 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{B609C4C9-39F7-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8D0AB3C2-1E89-4BE4-85C2-277914B113DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly.Domain", "Vidly.Domain\Vidly.Domain.csproj", "{E5BABB43-403E-4189-828C-660D7600B58D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5BABB43-403E-4189-828C-660D7600B58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BABB43-403E-4189-828C-660D7600B58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BABB43-403E-4189-828C-660D7600B58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BABB43-403E-4189-828C-660D7600B58D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -24,6 +36,7 @@ Global
 		{91EA81FD-D1F4-41A4-B5AD-2E56D9AFCF09} = {FA933160-363B-4E44-A539-7960C6C0E0B6}
 		{B609C4C9-39F7-496E-AAE1-D912A443FDAA} = {FA933160-363B-4E44-A539-7960C6C0E0B6}
 		{8D0AB3C2-1E89-4BE4-85C2-277914B113DD} = {FA933160-363B-4E44-A539-7960C6C0E0B6}
+		{E5BABB43-403E-4189-828C-660D7600B58D} = {91EA81FD-D1F4-41A4-B5AD-2E56D9AFCF09}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CFDE60D-FC78-4CA0-81FA-D7FB604C514C}
