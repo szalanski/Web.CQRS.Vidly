@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Vidly.Application.Functions.Movies
+namespace Vidly.Application.Functions.Movies.Dtos
 {
     public class MovieDto
     {

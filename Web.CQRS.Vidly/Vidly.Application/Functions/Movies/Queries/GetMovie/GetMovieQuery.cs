@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Vidly.Application.Functions.Movies.Dtos;
 
 namespace Vidly.Application.Functions.Movies.Queries.GetMovie
 {

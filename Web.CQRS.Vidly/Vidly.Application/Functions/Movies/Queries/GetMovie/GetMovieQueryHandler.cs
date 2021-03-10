@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
 using Vidly.Application.Contracts.Presistence;
+using Vidly.Application.Functions.Movies.Dtos;
 using Vidly.Domain.Entities;
 
 namespace Vidly.Application.Functions.Movies.Queries.GetMovie
