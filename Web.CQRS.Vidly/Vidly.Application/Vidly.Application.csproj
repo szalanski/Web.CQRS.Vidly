@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Vidly.Domain\Vidly.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Functions\" />
-  </ItemGroup>
-
 </Project>
