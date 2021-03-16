@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
 using Vidly.Application.Functions.Movies;
+using Vidly.Application.Functions.Movies.Commands;
 using Vidly.Application.Functions.Movies.Dtos;
 using Vidly.Domain.Entities;
 
@@ -13,6 +14,8 @@ namespace Vidly.Application.Mapping
         public MappingProfile()
         {
             CreateMap<Movie, MovieDto>().ReverseMap();
+            CreateMap<Movie, CreateMovieCommand>().ReverseMap();
+            
         }
     }
 }
