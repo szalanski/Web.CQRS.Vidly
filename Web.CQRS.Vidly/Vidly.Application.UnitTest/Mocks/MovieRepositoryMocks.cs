@@ -9,13 +9,14 @@ using Range = Moq.Range;
 
 namespace Vidly.Application.UnitTest
 {
-    public class RepositoryMocks
-    {
+    public class MovieRepositoryMocks
+    {   
         public static Mock<IMovieRepository> GetMovieRepository()
         {
             var moviesRepo = GetMovies;
 
             var mockMovieRepository = new Mock<IMovieRepository>();
+
             mockMovieRepository.Setup(repo => repo.GetAllAsync()).ReturnsAsync(moviesRepo.Values.ToList());
 
             mockMovieRepository.Setup(repo => repo.GetByIdAsync(It.IsInRange(1, moviesRepo.Count, Range.Inclusive))).ReturnsAsync((int id) => GetMovies[id]);
