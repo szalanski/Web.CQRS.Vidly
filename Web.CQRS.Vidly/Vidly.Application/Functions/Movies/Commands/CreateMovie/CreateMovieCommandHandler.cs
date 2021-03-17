@@ -12,7 +12,7 @@ using Vidly.Domain.Entities;
 
 namespace Vidly.Application.Functions.Movies.Commands
 {
-    public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, int>
+    public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, CreateMovieCommandResponse>
     {
         private readonly IMovieRepository _movieRepository;
         private readonly IMapper _mapper;
@@ -21,18 +21,18 @@ namespace Vidly.Application.Functions.Movies.Commands
         {
             _movieRepository = movieRepository;
             _mapper = mapper;
-
         }
-        public async Task<int> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
+
+        public async Task<CreateMovieCommandResponse> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
         {
             var validator = new CreateMovieCommandValidator();
             var validationResult = await validator.ValidateAsync(request);
-
+            if(!validationResult.IsValid)
+                return new CreateMovieCommandResponse(validationResult);
          
-
             var movie = _mapper.Map<Movie>(request);
             movie = await _movieRepository.AddsAsync(movie);
-            return movie.Id;
+            return new CreateMovieCommandResponse(movie.Id);
         }
     }
 }
